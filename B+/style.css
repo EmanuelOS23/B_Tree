@@ -1,0 +1,228 @@
+body {
+    background: #f8fafc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    color: #2d3748;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    color: #2b6cb0;
+    margin-bottom: 15px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+    padding: 15px;
+    background: #edf2f7;
+    border-radius: 10px;
+}
+
+input, button {
+    padding: 8px 15px;
+    font-size: 0.95rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+}
+
+input {
+    background: white;
+    width: 150px;
+}
+
+button {
+    background: #2b6cb0;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background: #2c5282;
+    transform: translateY(-1px);
+}
+
+.visualization {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.tree-section, .sequence-section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.tree {
+    min-height: 500px;
+    overflow: auto;
+    position: relative;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    background: #f7fafc;
+}
+
+.leaf-sequence {
+    min-height: 200px;
+    padding: 15px;
+    background: #f0fff4;
+    border: 2px solid #9ae6b4;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+}
+
+.node {
+    display: inline-block;
+    background: white;
+    border: 2px solid #4299e1;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 2;
+    min-width: 80px;
+}
+
+.node.internal {
+    border-color: #4299e1;
+    background: #ebf8ff;
+}
+
+.node.leaf {
+    border-color: #48bb78;
+    background: #f0fff4;
+}
+
+.node.root {
+    border-color: #ed8936;
+    background: #fffaf0;
+}
+
+.node.full {
+    border-color: #e53e3e;
+    background: #fed7d7;
+}
+
+.level {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 60px;
+    position: relative;
+    min-height: 80px;
+}
+
+.node-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
+    position: relative;
+}
+
+.connections {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.connection {
+    stroke: #a0aec0;
+    stroke-width: 2;
+}
+
+.leaf-connection {
+    stroke: #48bb78;
+    stroke-width: 1.5;
+    stroke-dasharray: 5,5;
+}
+
+.history {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.history h3 {
+    margin-top: 0;
+}
+
+.history-entry {
+    margin: 8px 0;
+    padding: 8px 12px;
+    background: #f7fafc;
+    border-radius: 6px;
+    border-left: 4px solid #4299e1;
+}
+
+.history-entry.insert {
+    border-left-color: #48bb78;
+}
+
+.history-entry.delete {
+    border-left-color: #f56565;
+}
+
+.history-entry.info {
+    border-left-color: #4299e1;
+}
+
+.leaf-sequence-item {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 12px;
+    background: #c6f6d5;
+    border: 1px solid #9ae6b4;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.leaf-sequence-arrow {
+    display: inline-block;
+    margin: 0 5px;
+    color: #48bb78;
+    font-weight: bold;
+}
+
+#treeInfo {
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #4a5568;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.sequence-items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+}

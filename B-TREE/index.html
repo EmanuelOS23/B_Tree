@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore B Interativa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Visualizador de Árvore B</h1>
+
+     
+
+        <div class="controls">
+            <input id="letterInput" maxlength="1" placeholder="Digite uma letra (A-Z)">
+            <button onclick="insertLetter()">Inserir</button>
+            <button onclick="deleteLetter()">Excluir</button>
+            <button onclick="resetTree()">Resetar</button>
+            <button onclick="setDegree()">Definir T</button>
+            <button onclick="loadInitialTree()">Carregar Árvore Inicial</button>
+        </div>
+
+        <div class="main-content">
+            <div id="tree" class="tree"></div>
+        </div>
+
+        <div class="history">
+            <h3>Histórico de Operações</h3>
+            <div id="historyLog"></div>
+        </div>
+    </div>
+
+    <script src="btree.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de Árvore B+</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Visualizador de Árvore B+</h1>
+
+        <div id="treeInfo"></div>
+
+        <div class="controls">
+            <input id="valueInput" type="number" placeholder="Digite um número" min="0" max="999">
+            <button onclick="insertValue()">Inserir</button>
+            <button onclick="deleteValue()">Excluir</button>
+            <button onclick="resetTree()">Resetar</button>
+            <button onclick="setOrder()">Definir Ordem</button>
+            <button onclick="loadSampleData()">Dados de Exemplo</button>
+        </div>
+
+        <div class="visualization">
+            <div class="tree-section">
+                <h3>Estrutura da Árvore B+</h3>
+                <div id="tree" class="tree"></div>
+            </div>
+            
+            <div class="sequence-section">
+                <h3>Sequência Folha (Valores Ordenados)</h3>
+                <div id="leafSequence" class="leaf-sequence"></div>
+            </div>
+        </div>
+
+        <div class="history">
+            <h3>Histórico de Operações</h3>
+            <div id="historyLog"></div>
+        </div>
+    </div>
+
+    <script src="bplustree.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
